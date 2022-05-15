@@ -1,0 +1,11 @@
+
+spring:
+  application:
+    name: cloud-config-client-3355
+  cloud:
+    config:
+      label: master  # master分支
+      name: application # 前缀
+      profile: dev #
+      uri: http://localhost:3344 # 拼接uri 最后生成 http://localhost:3344/master/application-dev.yml  从配置中心获取的配置文件
+
