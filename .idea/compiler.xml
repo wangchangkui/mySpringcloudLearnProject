@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="BUILD_PROCESS_HEAP_SIZE" value="1024" />
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="order_hystrix80" />
+        <module name="payment8002" />
+        <module name="payment_hystrix8001" />
+        <module name="payment8004" />
+        <module name="payment8006" />
+        <module name="spring-cloud-config" />
+        <module name="order80" />
+        <module name="order_zookeeper80" />
+        <module name="HystixOrderDashBoard9001" />
+        <module name="commons" />
+        <module name="springcloudGateway9527" />
+        <module name="eureka7001" />
+        <module name="order_consul80" />
+        <module name="eureka7002" />
+        <module name="payment8001" />
+        <module name="order_openfeign80" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="HystixOrderDashBoard9001" options="-parameters" />
+      <module name="commons" options="-parameters" />
+      <module name="eureka7001" options="-parameters" />
+      <module name="eureka7002" options="-parameters" />
+      <module name="order80" options="-parameters" />
+      <module name="order_consul80" options="-parameters" />
+      <module name="order_hystrix80" options="-parameters" />
+      <module name="order_openfeign80" options="-parameters" />
+      <module name="order_zookeeper80" options="-parameters" />
+      <module name="payment8001" options="-parameters" />
+      <module name="payment8002" options="-parameters" />
+      <module name="payment8004" options="-parameters" />
+      <module name="payment8006" options="-parameters" />
+      <module name="payment_hystrix8001" options="-parameters" />
+      <module name="spring-cloud-config" options="-parameters" />
+      <module name="springcloudGateway9527" options="-parameters" />
+    </option>
+  </component>
+</project>
