@@ -30,6 +30,7 @@
         <module>order_hystrix80</module>
         <module>HystixOrderDashBoard9001</module>
         <module>springcloudGateway9527</module>
+        <module>spring-cloud-config</module>
     </modules>
 
 

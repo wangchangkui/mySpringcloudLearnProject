@@ -34,7 +34,7 @@ eureka:
     register-with-eureka: true
   instance:
     # 向注册中心提供别名
-    instance-id: cloud-payment-hystrix-server8001
+    instance-id: cloud-gatewat-server9527
     # 向注册中心暴露ip
     prefer-ip-address: true
     # 向注册发送心跳机制的时间
