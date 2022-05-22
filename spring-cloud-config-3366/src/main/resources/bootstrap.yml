@@ -1,7 +1,8 @@
-
+server:
+  port: 3366
 spring:
   application:
-    name: cloud-config-client-3355
+    name: cloud-config-client-3366
   cloud:
     config:
       label: master  # master分支
@@ -21,11 +22,12 @@ spring:
         prefetch: 5
     virtual-host: my_vhost
 
+
+
+
+
 management:
   endpoints:
     web:
       exposure:
         include: '*'
-server:
-  port: 3355
-

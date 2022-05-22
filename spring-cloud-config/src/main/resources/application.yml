@@ -5,15 +5,35 @@ spring:
   application:
     name: cloud-config
   cloud:
+    bus:
+      trace:
+        enabled: true
+      refresh:
+        enabled: true
     config:
       server:
         git:
           uri: https://github.com/wangchangkui/spring-cloud-Config.git
+          force-pull: true
           search-paths:
             - spring-cloud-Config
           default-label: master
+          username: wangchangkui
+          password: wck3798405
+          basedir: D:/config
       label: master
-
+  rabbitmq:
+    addresses: 101.37.253.142
+    port: 5672
+    username: admin
+    password: admin
+    listener:
+      simple:
+        concurrency: 10
+        max-concurrency: 20
+      direct:
+        prefetch: 5
+    virtual-host: my_vhost
 eureka:
   client:
     service-url:
@@ -30,3 +50,10 @@ eureka:
     lease-renewal-interval-in-seconds: 60
     # 最后一次心跳间隔多久 会触发注销
     lease-expiration-duration-in-seconds: 90
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "bus-refresh"

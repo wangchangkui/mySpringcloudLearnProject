@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Description TODO
  * @createTime 2022年05月15日 21:37:00
  */
+
 /**
  * RefreshScope
  动态刷新config配置文件的注解

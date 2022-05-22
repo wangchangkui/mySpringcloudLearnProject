@@ -2,7 +2,10 @@
 <module version="4">
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
-      <configuration />
+      <configuration>
+        <fileset id="bootstrap_spring_boot_com.myxiaowang.CloudConfig" profiles="application.yml" autodetected="true" />
+        <fileset id="spring_boot_com.myxiaowang.CloudConfig" profiles="application.yml" autodetected="true" />
+      </configuration>
     </facet>
   </component>
 </module>
