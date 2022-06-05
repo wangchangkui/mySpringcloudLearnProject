@@ -14,6 +14,7 @@
         <module name="payment8004" />
         <module name="payment8006" />
         <module name="spring-cloud-config" />
+        <module name="spring-cloud-stream-provider-8801" />
         <module name="spring-cloud-config-3366" />
         <module name="order80" />
         <module name="order_zookeeper80" />
@@ -21,9 +22,11 @@
         <module name="commons" />
         <module name="springcloudGateway9527" />
         <module name="eureka7001" />
+        <module name="spring-cloud-stream-consumer8803" />
         <module name="order_consul80" />
         <module name="eureka7002" />
         <module name="spring-cloud-config-client" />
+        <module name="spring-cloud-stream-comsumer8802" />
         <module name="payment8001" />
         <module name="order_openfeign80" />
       </profile>
@@ -48,6 +51,9 @@
       <module name="spring-cloud-config" options="-parameters" />
       <module name="spring-cloud-config-3366" options="-parameters" />
       <module name="spring-cloud-config-client" options="-parameters" />
+      <module name="spring-cloud-stream-comsumer8802" options="-parameters" />
+      <module name="spring-cloud-stream-consumer8803" options="-parameters" />
+      <module name="spring-cloud-stream-provider-8801" options="-parameters" />
       <module name="springcloudGateway9527" options="-parameters" />
     </option>
   </component>

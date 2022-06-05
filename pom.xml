@@ -33,6 +33,9 @@
         <module>spring-cloud-config</module>
         <module>spring-cloud-config-client</module>
         <module>spring-cloud-config-3366</module>
+        <module>spring-cloud-stream-provider-8801</module>
+        <module>spring-cloud-stream-comsumer8802</module>
+        <module>spring-cloud-stream-consumer8803</module>
     </modules>
 
 
