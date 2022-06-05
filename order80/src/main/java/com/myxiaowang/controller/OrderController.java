@@ -31,6 +31,7 @@ public class OrderController {
     @Autowired
     private LoadBalance loadBalance;
 
+
     @Autowired
     private DiscoveryClient discoveryClient;
 
@@ -58,6 +59,11 @@ public class OrderController {
             return ResponseResult.success("订单保存成功");
         }
         return ResponseResult.success("订单保存失败");
+    }
+
+    @GetMapping("/slueth")
+    public String slueth(){
+        return restTemplate.getForObject("http://localhost:8001" + "/payment/sleuth", String.class);
     }
 
     @GetMapping("/lb/{id}")

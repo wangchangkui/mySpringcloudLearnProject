@@ -38,4 +38,9 @@ public class PaymentController {
         log.info("执行端口号：" + port);
         return ResponseResult.success( paymentService.save(payment) );
     }
+
+    @GetMapping("/sleuth")
+    public String sleuth(){
+        return "hello,Sleuth";
+    }
 }
