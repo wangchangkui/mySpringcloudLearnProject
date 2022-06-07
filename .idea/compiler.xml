@@ -23,10 +23,13 @@
         <module name="springcloudGateway9527" />
         <module name="eureka7001" />
         <module name="spring-cloud-stream-consumer8803" />
+        <module name="cloudalibaba-provider-payment9002" />
+        <module name="cloudalibaba-provider-payment9001" />
         <module name="order_consul80" />
         <module name="eureka7002" />
         <module name="spring-cloud-config-client" />
         <module name="spring-cloud-stream-comsumer8802" />
+        <module name="cloudalibaba-order80" />
         <module name="payment8001" />
         <module name="order_openfeign80" />
       </profile>
@@ -35,6 +38,9 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="HystixOrderDashBoard9001" options="-parameters" />
+      <module name="cloudalibaba-order80" options="-parameters" />
+      <module name="cloudalibaba-provider-payment9001" options="-parameters" />
+      <module name="cloudalibaba-provider-payment9002" options="-parameters" />
       <module name="commons" options="-parameters" />
       <module name="eureka7001" options="-parameters" />
       <module name="eureka7002" options="-parameters" />

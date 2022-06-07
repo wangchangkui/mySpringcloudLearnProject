@@ -36,6 +36,9 @@
         <module>spring-cloud-stream-provider-8801</module>
         <module>spring-cloud-stream-comsumer8802</module>
         <module>spring-cloud-stream-consumer8803</module>
+        <module>cloudalibaba-provider-payment9001</module>
+        <module>cloudalibaba-provider-payment9002</module>
+        <module>cloudalibaba-order80</module>
     </modules>
 
 

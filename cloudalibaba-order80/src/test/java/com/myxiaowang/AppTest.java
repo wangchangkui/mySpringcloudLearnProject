@@ -1,4 +1,4 @@
-package org.myxiaowang;
+package com.myxiaowang;
 
 import static org.junit.Assert.assertTrue;
 
