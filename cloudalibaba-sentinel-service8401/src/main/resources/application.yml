@@ -13,6 +13,8 @@ spring:
       transport:
         dashboard: localhost:8080
         port: 8719
+      log:
+        dir: D:/logs/
 
 management:
   endpoints:
