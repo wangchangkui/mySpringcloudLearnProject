@@ -11,4 +11,6 @@ spring:
         file-extension: yaml
         # 配置文件的地址也需要指定
         server-addr: localhost:8848
+        group: ALP_GROUP
+        namespace: 371c3276-517f-4534-87b1-cbea27f080eb
 
