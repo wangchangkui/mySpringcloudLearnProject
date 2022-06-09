@@ -33,6 +33,7 @@
         <module name="order_consul80" />
         <module name="eureka7002" />
         <module name="spring-cloud-config-client" />
+        <module name="cloudalibaba-sentinel-service8401" />
       </profile>
     </annotationProcessing>
   </component>
@@ -43,6 +44,7 @@
       <module name="cloudalibaba-order80" options="-parameters" />
       <module name="cloudalibaba-provider-payment9001" options="-parameters" />
       <module name="cloudalibaba-provider-payment9002" options="-parameters" />
+      <module name="cloudalibaba-sentinel-service8401" options="-parameters" />
       <module name="commons" options="-parameters" />
       <module name="eureka7001" options="-parameters" />
       <module name="eureka7002" options="-parameters" />
