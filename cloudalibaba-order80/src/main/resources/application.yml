@@ -14,3 +14,7 @@ spring:
         port: 8719
       log:
         dir: D:/logs/
+
+feign:
+  sentinel:
+    enabled: true

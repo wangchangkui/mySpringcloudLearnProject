@@ -2,6 +2,10 @@ package com.myxiaowang.controller;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
+import com.myxiaowang.service.FallBackServiceImpl;
+import com.myxiaowang.service.PaymentService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -21,6 +25,15 @@ public class Index {
     private final String serverUrl="http://nacos-payment-provider";
     @Resource
     private RestTemplate restTemplate;
+
+    @Resource
+    private PaymentService paymentService;
+
+    @GetMapping("/helloNacos")
+    public String helloNacos() {
+        return paymentService.helloNacos();
+    }
+
 
     @GetMapping("/hello/nacos")
     @SentinelResource(value = "fallback", fallback = "fallback",blockHandler = "blockHandler")
