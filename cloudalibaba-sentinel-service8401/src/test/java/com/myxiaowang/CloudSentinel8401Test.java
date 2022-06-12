@@ -15,6 +15,12 @@ public class CloudSentinel8401Test
     @Test
     public void shouldAnswerWithTrue()
     {
-        assertTrue( true );
+        String s ="";
+        int counter = 0;
+        while (true){
+            s=s+counter+++"";
+            System.out.println(s);
+            System.out.println("当前字符串长度"+counter);
+        }
     }
 }
