@@ -18,6 +18,7 @@
         <module name="cloudalibaba-order80" />
         <module name="payment8001" />
         <module name="order_openfeign80" />
+        <module name="seata-order-service" />
         <module name="order_hystrix80" />
         <module name="payment8002" />
         <module name="payment8004" />
@@ -58,6 +59,7 @@
       <module name="payment8004" options="-parameters" />
       <module name="payment8006" options="-parameters" />
       <module name="payment_hystrix8001" options="-parameters" />
+      <module name="seata-order-service" options="-parameters" />
       <module name="spring-cloud-config" options="-parameters" />
       <module name="spring-cloud-config-3366" options="-parameters" />
       <module name="spring-cloud-config-client" options="-parameters" />
