@@ -8,12 +8,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="seata-account-service" />
         <module name="payment_hystrix8001" />
         <module name="cloudalibaba-config-naocs3377" />
         <module name="spring-cloud-config" />
         <module name="spring-cloud-config-3366" />
         <module name="order80" />
         <module name="commons" />
+        <module name="seata-storage-service" />
         <module name="spring-cloud-stream-comsumer8802" />
         <module name="cloudalibaba-order80" />
         <module name="payment8001" />
@@ -59,7 +61,9 @@
       <module name="payment8004" options="-parameters" />
       <module name="payment8006" options="-parameters" />
       <module name="payment_hystrix8001" options="-parameters" />
+      <module name="seata-account-service" options="-parameters" />
       <module name="seata-order-service" options="-parameters" />
+      <module name="seata-storage-service" options="-parameters" />
       <module name="spring-cloud-config" options="-parameters" />
       <module name="spring-cloud-config-3366" options="-parameters" />
       <module name="spring-cloud-config-client" options="-parameters" />

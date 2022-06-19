@@ -42,6 +42,8 @@
         <module>cloudalibaba-config-naocs3377</module>
         <module>cloudalibaba-sentinel-service8401</module>
         <module>seata-order-service</module>
+        <module>seata-storage-service</module>
+        <module>seata-account-service</module>
     </modules>
 
 

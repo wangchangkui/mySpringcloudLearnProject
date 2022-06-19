@@ -6,27 +6,27 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
-import java.math.BigDecimal;
-
 /**
  * @author wck
  * @version 1.0.0
  * @Description
- * @createTime 2022年06月13日 22:32:00
+ * @createTime 2022年06月19日 20:25:00
  */
 @Data
-@TableName("t_order")
-public class Order {
+@TableName("t_storage")
+public class Storage {
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
-    @TableField(value = "user_id")
-    private Long userId;
+
     @TableField(value = "product_id")
-    private Long productId;
-    @TableField(value = "count")
-    private Integer count;
-    @TableField(value = "money")
-    private BigDecimal money;
-    @TableField(value = "status")
-    private Integer status;
+    private String productId;
+
+    @TableField(value = "total")
+    private Integer total;
+
+    @TableField(value = "used")
+    private Integer used;
+
+    @TableField(value = "residue")
+    private Integer residue;
 }

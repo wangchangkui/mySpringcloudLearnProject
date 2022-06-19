@@ -10,4 +10,10 @@ import com.myxiaowang.entity.Order;
  * @createTime 2022年06月13日 22:34:00
  */
 public interface OrderService extends IService<Order> {
+
+    /**
+     * 微服务创建订单
+     * @param order 订单信息
+     */
+    String create(Order order);
 }

@@ -1,5 +1,6 @@
 package com.myxiaowang.controller;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.myxiaowang.entity.Order;
 import com.myxiaowang.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,8 +27,8 @@ public class OrderController {
     }
 
     @PostMapping("/saveOrder")
-    public Boolean saveOrder(@RequestBody Order order){
-        return orderService.save(order);
+    public String saveOrder(@RequestBody Order order){
+        return orderService.create(order);
     }
 
     @PostMapping("/updateOrder")
@@ -40,5 +41,10 @@ public class OrderController {
         return orderService.removeById(order.getId());
     }
 
+
+    @GetMapping("/updateOrderByUserId/{userId}")
+    public Boolean updateOrderByUserId(@PathVariable("userId") Long userId){
+        return orderService.update(new LambdaQueryWrapper<Order>().eq(Order::getUserId, userId));
+    }
 
 }
