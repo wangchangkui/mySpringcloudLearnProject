@@ -105,7 +105,6 @@ public class AuthorizationServerSecurityConfigurer extends AuthorizationServerCo
         clients.inMemory()
                 .withClient("admin")
                 .secret(passwordEncoder.encode("admin"))
-                .resourceIds("admin")
                 .authorizedGrantTypes("authorization_code","password","refresh_token")
                 .scopes("all")
                 // 授权完成自动跳转

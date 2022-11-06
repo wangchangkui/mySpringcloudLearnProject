@@ -3,6 +3,7 @@ package com.myxiaowang.config.auth.util;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.InMemoryTokenStore;
@@ -30,6 +31,7 @@ public class TokenStoreConfig {
     }
 
     @Bean("imMemory")
+    @Primary
     public TokenStore memoryTokenStore(){
         return new InMemoryTokenStore();
     }
