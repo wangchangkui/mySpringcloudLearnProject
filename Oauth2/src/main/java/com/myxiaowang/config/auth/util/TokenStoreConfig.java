@@ -24,7 +24,7 @@ import static com.myxiaowang.config.auth.core.AuthorizationServerSecurityConfigu
 @Configuration
 public class TokenStoreConfig {
 
-    @Bean
+    @Bean("jwtTokenStore")
     @Qualifier("jwtTokenStore")
     public TokenStore jwtTokenStore(){
         return new JwtTokenStore(accessTokenConverter());
@@ -37,10 +37,12 @@ public class TokenStoreConfig {
     }
 
 
-    @Bean("myJwt")
+    @Bean
+    @Primary
     public JwtAccessTokenConverter accessTokenConverter() {
         JwtAccessTokenConverter jwtAccessTokenConverter = new JwtAccessTokenConverter();
-        jwtAccessTokenConverter.setKeyPair(keyPair());
+        // 增强安全 需要生成对应的文件
+//        jwtAccessTokenConverter.setKeyPair(keyPair());
         jwtAccessTokenConverter.setSigningKey(JWT_PASSWORD);
         return jwtAccessTokenConverter;
     }

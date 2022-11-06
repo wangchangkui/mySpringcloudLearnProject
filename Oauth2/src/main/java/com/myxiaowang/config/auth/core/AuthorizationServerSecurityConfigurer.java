@@ -47,7 +47,7 @@ public class AuthorizationServerSecurityConfigurer extends AuthorizationServerCo
      * token存内存
      */
     @Autowired
-    @Qualifier("imMemory")
+    @Qualifier("jwtTokenStore")
     private TokenStore tokenStore;
 
     /**
@@ -66,7 +66,6 @@ public class AuthorizationServerSecurityConfigurer extends AuthorizationServerCo
      * 转换为token
      */
     @Autowired
-    @Qualifier("myJwt")
     private JwtAccessTokenConverter jwtAccessTokenConverter;
 
 

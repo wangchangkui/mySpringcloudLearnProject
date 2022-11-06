@@ -24,10 +24,16 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
 
+    @Autowired
+    @Qualifier("jwtTokenStore")
+    private TokenStore tokenStore;
+
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
         resources.resourceId("admin")
-                .tokenServices(tokenService())
+                // 远程认证 不推荐
+//                .tokenServices(tokenService())
+                .tokenStore(tokenStore)
                 .stateless(true);
 
     }
