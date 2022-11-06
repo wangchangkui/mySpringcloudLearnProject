@@ -11,9 +11,12 @@
         <module name="seata-account-service" />
         <module name="payment_hystrix8001" />
         <module name="cloudalibaba-config-naocs3377" />
+        <module name="cloudalibaba-provider-payment" />
         <module name="spring-cloud-config" />
+        <module name="Oauth2" />
         <module name="spring-cloud-config-3366" />
         <module name="order80" />
+        <module name="springc0cloud-config-3366" />
         <module name="commons" />
         <module name="seata-storage-service" />
         <module name="spring-cloud-stream-comsumer8802" />
@@ -37,14 +40,17 @@
         <module name="eureka7002" />
         <module name="spring-cloud-config-client" />
         <module name="cloudalibaba-sentinel-service8401" />
+        <module name="spring-cloud-stream8803" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="HystixOrderDashBoard9001" options="-parameters" />
+      <module name="Oauth2" options="-parameters" />
       <module name="cloudalibaba-config-naocs3377" options="-parameters" />
       <module name="cloudalibaba-order80" options="-parameters" />
+      <module name="cloudalibaba-provider-payment" options="-parameters" />
       <module name="cloudalibaba-provider-payment9001" options="-parameters" />
       <module name="cloudalibaba-provider-payment9002" options="-parameters" />
       <module name="cloudalibaba-sentinel-service8401" options="-parameters" />
@@ -70,6 +76,8 @@
       <module name="spring-cloud-stream-comsumer8802" options="-parameters" />
       <module name="spring-cloud-stream-consumer8803" options="-parameters" />
       <module name="spring-cloud-stream-provider-8801" options="-parameters" />
+      <module name="spring-cloud-stream8803" options="-parameters" />
+      <module name="springc0cloud-config-3366" options="-parameters" />
       <module name="springcloudGateway9527" options="-parameters" />
     </option>
   </component>
