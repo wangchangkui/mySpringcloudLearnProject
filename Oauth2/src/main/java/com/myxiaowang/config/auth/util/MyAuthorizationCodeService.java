@@ -1,9 +1,13 @@
 package com.myxiaowang.config.auth.util;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.oauth2.provider.code.AuthorizationCodeServices;
 import org.springframework.security.oauth2.provider.code.InMemoryAuthorizationCodeServices;
+import org.springframework.security.oauth2.provider.code.JdbcAuthorizationCodeServices;
+
+import javax.sql.DataSource;
 
 /**
  * @author wck
@@ -13,8 +17,15 @@ import org.springframework.security.oauth2.provider.code.InMemoryAuthorizationCo
  */
 @Configuration
 public class MyAuthorizationCodeService {
-    @Bean
+    @Autowired
+    private DataSource dataSource;
+
+    @Bean("inMemoryAuthorizationCodeServices")
     public AuthorizationCodeServices authorizationCodeServices(){
         return new InMemoryAuthorizationCodeServices();
+    }
+    @Bean("inJdbcAuthorizationCodeServices")
+    public AuthorizationCodeServices jdbcAuthorizationCodeServices(){
+        return new JdbcAuthorizationCodeServices(dataSource);
     }
 }

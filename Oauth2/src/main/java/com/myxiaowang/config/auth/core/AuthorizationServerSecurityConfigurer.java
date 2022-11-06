@@ -22,6 +22,7 @@ import org.springframework.security.oauth2.provider.token.TokenEnhancerChain;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 
+import javax.sql.DataSource;
 import java.util.Arrays;
 
 
@@ -49,6 +50,10 @@ public class AuthorizationServerSecurityConfigurer extends AuthorizationServerCo
     @Autowired
     @Qualifier("jwtTokenStore")
     private TokenStore tokenStore;
+
+    @Autowired
+    @Qualifier("jdbcClientDetailsService")
+    private ClientDetailsService myClientDetailsService;
 
     /**
      * 认证服务
@@ -85,6 +90,7 @@ public class AuthorizationServerSecurityConfigurer extends AuthorizationServerCo
      * 授权码模式下的认证存放位置
      */
     @Autowired
+    @Qualifier("inJdbcAuthorizationCodeServices")
     private AuthorizationCodeServices myAuthorizationCodeServices;
 
 
@@ -98,17 +104,23 @@ public class AuthorizationServerSecurityConfigurer extends AuthorizationServerCo
                 .passwordEncoder(passwordEncoder);
     }
 
+    /**
+     * 基于内存的 复制这段代码
+     *  clients.inMemory()
+     *                 .withClient("admin")
+     *                 .secret(passwordEncoder.encode("admin"))
+     *                 .authorizedGrantTypes("authorization_code","password","refresh_token")
+     *                 .scopes("all")
+     *                 // 授权完成自动跳转
+     *                 .redirectUris("http://www.iwck.top");
+     * @param clients the client details configurer
+     * @throws Exception 异常
+     */
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        // 基于内存的认证客户端信息
-        clients.inMemory()
-                .withClient("admin")
-                .secret(passwordEncoder.encode("admin"))
-                .authorizedGrantTypes("authorization_code","password","refresh_token")
-                .scopes("all")
-                // 授权完成自动跳转
-                .redirectUris("http://www.iwck.top");
+        clients.withClientDetails(myClientDetailsService).jdbc().passwordEncoder(passwordEncoder);
     }
+
 
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) {

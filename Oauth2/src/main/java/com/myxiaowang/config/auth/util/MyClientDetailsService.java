@@ -24,7 +24,7 @@ public class MyClientDetailsService {
      * 客户端基于数据库认证
      * @return jdbcClientDetailsService
      */
-    @Bean
+    @Bean(name = "jdbcClientDetailsService")
     @Qualifier("jdbcClientDetailsService")
     public org.springframework.security.oauth2.provider.ClientDetailsService jdbcClientDetailsService() {
         return new JdbcClientDetailsService(dataSource);
